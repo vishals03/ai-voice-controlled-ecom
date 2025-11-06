@@ -45,5 +45,31 @@ cd voice-shop
 npm install
 npm run dev
 
+```
+
 ---
+
+## 🗣️ Example Voice Commands
+
+- “Show me the products”
+- “Add to cart”
+- “Go to checkout”
+- “Sign in”
+- “Log out”
+
+---
+
+## 🔮 Future Enhancements
+
+- Smarter NLP-based voice command understanding
+- Voice search with filters and product recommendations
+- Multi-language support
+- Backend integration for real-time product updates
+
+---
+
+## 📸 Preview
+
+![WhatsApp Image 2025-11-07 at 00 43 04_4575afdd](https://github.com/user-attachments/assets/1e3b132d-378d-4a7c-96b2-f0debec112c5)
+
 
