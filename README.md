@@ -1,83 +1,29 @@
-# 🛍️ Voice Shop
+# voice shop
+  
+This is a project built with [Chef](https://chef.convex.dev) using [Convex](https://convex.dev) as its backend.
+ You can find docs about Chef with useful information like how to deploy to production [here](https://docs.convex.dev/chef).
+  
+This project is connected to the Convex deployment named [`resolute-guineapig-483`](https://dashboard.convex.dev/d/resolute-guineapig-483).
+  
+## Project structure
+  
+The frontend code is in the `app` directory and is built with [Vite](https://vitejs.dev/).
+  
+The backend code is in the `convex` directory.
+  
+`npm run dev` will start the frontend and backend servers.
 
-**Voice Shop** is an interactive web application that allows users to **navigate and shop using voice commands**.  
-It combines modern web technologies with speech recognition to create a **hands-free, accessible, and futuristic shopping experience**.
+## App authentication
 
----
+Chef apps use [Convex Auth](https://auth.convex.dev/) with Anonymous auth for easy sign in. You may wish to change this before deploying your app.
 
-## 🚀 Features
+## Developing and deploying your app
 
-- 🎙️ **Voice Command Interaction** – Browse, search, and select products using spoken commands.  
-- 💻 **Responsive UI** – Clean, adaptive design built with Tailwind CSS and React.  
-- 🔐 **User Authentication** – Secure login and logout features for a personalized experience.  
-- ⚡ **High Performance** – Vite-powered frontend ensures fast loading and smooth interaction.  
-- 🎨 **Modern Design** – Minimalist, mobile-friendly interface.  
-- 🔊 **Hands-Free Navigation** – Ideal for accessibility and multitasking scenarios.
+Check out the [Convex docs](https://docs.convex.dev/) for more information on how to develop with Convex.
+* If you're new to Convex, the [Overview](https://docs.convex.dev/understanding/) is a good place to start
+* Check out the [Hosting and Deployment](https://docs.convex.dev/production/) docs for how to deploy your app
+* Read the [Best Practices](https://docs.convex.dev/understanding/best-practices/) guide for tips on how to improve you app further
 
----
+## HTTP API
 
-## 🧠 How It Works
-
-1. **Speech Recognition:** The app listens for predefined voice commands (like “Show products” or “Go to cart”).  
-2. **Command Parsing:** Spoken input is processed via the **Web Speech API** and mapped to UI actions.  
-3. **Dynamic Interaction:** The site updates or responds visually, creating a natural, conversational experience.
-
----
-
-## 🛠️ Tech Stack
-
-| Category | Technologies |
-|-----------|--------------|
-| Frontend Framework | React + TypeScript |
-| Build Tool | Vite |
-| Styling | Tailwind CSS |
-| Voice Recognition | Web Speech API |
-| Authentication | Custom React Components |
-| Environment | Node.js |
-
----
-
-## ⚙️ Installation
-
-```bash
-git clone https://github.com/yourusername/voice-shop.git
-cd voice-shop
-npm install
-npm run dev
-
-```
-
----
-
-## 🗣️ Example Voice Commands
-
-- “Show me the products”
-- “Add to cart”
-- “Go to checkout”
-- “Sign in”
-- “Log out”
-
----
-
-## 🔮 Future Enhancements
-
-- Smarter NLP-based voice command understanding
-- Voice search with filters and product recommendations
-- Multi-language support
-- Backend integration for real-time product updates
-
----
-
-## 📸 Preview
-
-![WhatsApp Image 2025-11-07 at 00 43 04_4575afdd](https://github.com/user-attachments/assets/1e3b132d-378d-4a7c-96b2-f0debec112c5)
-
-![WhatsApp Image 2025-11-07 at 00 42 41_2cbefbed](https://github.com/user-attachments/assets/e0b1b6d6-f9e6-46c9-a750-bdf533362bd4)
-
----
-
-## 👨‍💻 Author
-
-Vishal S
-
-
+User-defined http routes are defined in the `convex/router.ts` file. We split these routes into a separate file from `convex/http.ts` to allow us to prevent the LLM from modifying the authentication routes.
